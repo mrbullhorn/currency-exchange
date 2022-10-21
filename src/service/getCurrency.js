@@ -1,0 +1,27 @@
+export default class CurrencyExchange {
+  static currencyData = (exchFrom, exchTo) => {
+    const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${exchFrom}/${exchTo}`;
+    return fetch(url)
+      .then((response) => {
+        console.log("response = " , response)
+        if(!response.ok) {
+          const errorMessage = `${response.status} ${response.statusText}`;
+          throw new Error(errorMessage);
+        } else {
+          return response.json();
+        }
+      })
+      .catch((error) => {
+        return error;
+
+      })
+      .then((data) => {
+        console.log("data =" , data);
+      });
+  }
+}
+
+//UI Logic
+const displayCurrency = (data) => {
+  
+}
