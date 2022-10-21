@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin'); 
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: './src/index.js',
   output: {
     filename: 'output.js',
     path: path.resolve(__dirname, 'dist')
@@ -19,7 +19,7 @@ module.exports = {
       verbose: true
     }),
     new HtmlWebpackPlugin({
-      title: 'Age Caluculator',
+      title: 'currency-exchange',
       template: './src/index.html',
       inject: 'body'
     })
