@@ -4,22 +4,23 @@ import CurrencyExchange from "./service/getCurrency";
 let exchangeCurrency = (from , to , howMuch) => {
   CurrencyExchange.currencyData(from , to , howMuch)
     .then((response) => {
-      if (response.main) {
-        printElements();
+      console.log("response =" , response)
+      if (response.result === "success") {
+        printElements(response);
       } else {
-        printError();
-      } 
+        printError(response);
+      }
     });
 };
 
 //UI Logic
 
-const printElements = (data) => {
-  document.querySelector('#showData').innerText = `Here's your ${data}`;
+const printElements = (response) => {
+  document.querySelector('#showData').innerText = `Here's your ${response}`;
 };
 
-const printError = (error) => {
-  document.querySelector('#showData').innerText = `There was an error ${error}`;
+const printError = (response) => {
+  document.querySelector('#showData').innerText = `There was an error ${response}`;
 };
 
 const handleFormSubmisson = (e) => {

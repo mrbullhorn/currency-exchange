@@ -3,8 +3,8 @@ export default class CurrencyExchange {
     const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${exchFrom}/${exchTo}/${howMuch}`;
     return fetch(url)
       .then((response) => {
-        console.log("response = " , response);
         if(!response.ok) {
+          console.log("response object =", response)
           const errorMessage = `${response.status} ${response.statusText}`;
           throw new Error(errorMessage);
         } else {
@@ -16,7 +16,7 @@ export default class CurrencyExchange {
 
       })
       .then((data) => {
-        console.log("data =" , data);
+        return data;
       });
   }
 }
