@@ -1,9 +1,9 @@
 export default class CurrencyExchange {
-  static currencyData = (exchFrom, exchTo) => {
-    const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${exchFrom}/${exchTo}`;
+  static currencyData(exchFrom, exchTo , howMuch) {
+    const url = `https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/${exchFrom}/${exchTo}/${howMuch}`;
     return fetch(url)
       .then((response) => {
-        console.log("response = " , response)
+        console.log("response = " , response);
         if(!response.ok) {
           const errorMessage = `${response.status} ${response.statusText}`;
           throw new Error(errorMessage);
@@ -21,7 +21,3 @@ export default class CurrencyExchange {
   }
 }
 
-//UI Logic
-const displayCurrency = (data) => {
-  
-}

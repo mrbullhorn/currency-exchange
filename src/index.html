@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="./index.js"></script>
+  <title>Currency Exchanger</title>
+</head>
+<body>
+  <h1>Currency Exchanger</h1>
+  <div id="formDiv">
+    <form>
+      <label for="howmuch">Please Enter the Amount You'd Like to Exchange:</label>
+      <input type="number" id="howmuch">
+      <label for="from">Convert from:</label>
+      <select name="currency" id="from">
+        <option value="">--Please choose an option--</option>
+        <option value="USD">US Dollars</option>
+      </select>
+      <label for="to">Convert to:</label>
+      <select name="tocurrency" id="to">
+        <option value="">--Please choose an option--</option>
+        <option value="EUR">Euros</option>
+      </select> 
+      <button type="submit">Convert!</button>
+    </form>
+  </div>
+  <div id="showData"></div>
+  
+</body>
+</html>
