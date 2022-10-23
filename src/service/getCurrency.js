@@ -4,7 +4,6 @@ export default class CurrencyExchange {
     return fetch(url)
       .then((response) => {
         if(!response.ok) {
-          console.log("response object =", response)
           const errorMessage = `${response.status} ${response.statusText}`;
           throw new Error(errorMessage);
         } else {
@@ -13,7 +12,6 @@ export default class CurrencyExchange {
       })
       .catch((error) => {
         return error;
-
       })
       .then((data) => {
         return data;
