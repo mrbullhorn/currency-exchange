@@ -1,4 +1,4 @@
-# 
+# Currency Exchange
 
 #### By _**Hans Ellis**_
 
@@ -16,15 +16,29 @@
 
 ## Description
 
-
+This is a simple web app showcasing my understanding of API calls and how to handle them. A user can input a value and then choose from 161 currencies to convert to and from.
 
 ## Setup/Installation Requirements
 
-
+1. Clone the repository: '[https://github.com/mrbullhorn/currency-exchange]'
+2. Navigate to the '[currency-exchange-2]' directory on your computer
+3. Open with your favorite text editor
+4. To use this app you will need an API key.
+-Travel to '[https://www.exchangerate-api.com/]'
+-Enter your email address and click 'Get Free Key!
+-Follow the instructions to obtain your api key.
+-Create a .env file and add it to your .gitignore. Make sure to commit your .gitignore at this point, before moving on!
+-Place your API key in an .env file at the top level of your directory.
+4. To start a development server and view the project in the browser:
+- Navigate to '[currency-exchange-2]' in your command line
+- Run the command "npm install" to install dependencies
+- Optionally, run the command "npm run build" to bundle the files
+- Finally, run the command "npm run start" to start a development server
+5. To run tests, navigate to '[age-calculator]' in your terminal and run the command "npm run test"
 
 ## Known Bugs
 
-* __
+* There are some issues getting the correct error message to display under certain conditions.
 
 ## Link to GH Pages:
 
